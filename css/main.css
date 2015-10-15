@@ -1,1 +1,244 @@
 /* Your stylesheet goes here */
+
+/*Bootstrap*/
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+/*Fonts*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic);
+
+
+/*These are general default settings for the page*/
+body { 
+	background-color: #E9EAEE;
+	font-family: "Lato", "Helvetica Neue", "Helvetica", "sans-serif"; 
+	font-size: 16px;
+	font-weight: 300;
+	
+}
+
+/*Selects all of the heading types*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Raleway", "Helvetica Neue", "Helvetica", "sans-serif";
+}
+
+header {
+	margin-top: 0px;
+	padding-top: 3em;
+}
+
+
+headline p{
+	font-style: italic;
+}
+
+/*This is for the Coffee cup about the "exquisite..."*/
+headline svg {
+	fill: #D87E28;
+	display: none;
+}
+
+h2 {
+	color: #BC6026;
+}
+
+nav.navbar{
+	background-color: #181C22;
+	border: none;
+	 /*This is to override the bootstrap default min-height of 50px*/
+	min-height: 0px;
+
+}
+
+/*To align the coffee cup no more than 15px*/
+.navbar .container {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+/*This selects each menu item. I used this specific tag in order to 
+override bootstrap default settings*/
+.navbar-default .navbar-nav>li>a {
+	display: inline;
+	color: white;
+	font-size: 16px;
+	font-variant: small-caps;
+	padding:0.5em;
+}
+
+/*This makes sure the navbar will keep its formatting when 
+the screen is less than 768px*/
+.navbar-default .navbar-nav>li {
+	display: inline;
+}
+
+/*Changes color when mouse goes over*/
+.navbar-default .navbar-nav>li>a:hover {
+	color: #D87E28;
+}
+
+/*This places the coffee cup exactly 15 px
+from the edge of the screen. Specifically when the 
+width is below 768px. */
+.nav {
+	padding-left: 40px;
+}
+
+/*The coffee cup in navbar*/
+svg {
+	fill: white;
+	height: 1em;
+}
+
+/*change color of coffee cup when mouse goes over*/
+svg:hover{
+	fill: #D87E28;
+}
+
+/*By default the motto will not appear. It only will on screens
+above 768px*/
+#motto {
+	display: none;
+}
+
+/*Specifically for cup under the header*/
+#cafe svg {
+	display: block;
+	fill: #D87E28;
+	height: 1.5em;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1em;
+}
+
+#cafe {
+	background-color: #dbdce3;
+	text-align: center;
+}
+
+/*This styles columns in the cafe info section*/
+#cafe .container .row .col-md-4 {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/*rounds edges of the map*/
+#cafe img {
+	border-radius: 5px;
+}
+
+/*This italicizes the menu descriptions*/
+#menu dd {
+	font-style: italic;
+	margin-left: 1em;
+
+}
+
+#story {
+	background-color: #dbdce3;
+}
+
+#story img {
+	max-height: 300px;
+	margin-left: 1em;
+	float: right;
+	border-radius: 5px;
+}
+
+#story p {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+footer {
+	border-top: 3px solid #D87E28;
+	background-color: #afb3c2;
+	font-size: 12px;
+	padding: 1em;
+	float: none;
+}
+
+/*Makes changes to screens wider than 768 px*/
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    header {
+    	color: white;
+    	text-align: right;
+    	min-height: 550px;
+    	background-image: url("../img/background-sm.jpg");
+    	background-repeat: no-repeat;
+    }
+    headline p{
+    	margin-bottom: 3em;
+    	font-size: 1.25em;
+    	text-align: center;
+    }
+    headline svg {
+    	margin-right: auto;
+    	margin-left: auto;
+		display: block;
+		height: 1.5em;
+		margin-bottom: 1em;
+		margin-top: 1em;
+	}
+    h2{
+    	text-align: center;
+    	margin-bottom: 1em;
+    }
+    nav.navbar {
+    	background-color: rgba(24, 28, 34, 0.8);
+    } 
+   	/*changes the spacing of items in the navbar when the 
+   	screen is larger than 768px */
+    .navbar-default .navbar-nav>li>a {
+    	display: inline-block;
+    	padding-left: 1em;
+    	padding-right: 1em;
+    }
+    /*ensures that the navbar doesn't shift when the screen is 
+    wider than 768px*/
+    .nav {
+    	padding-left: 0px;
+    }
+    /*makes motto appear on larger screens*/
+    #motto {
+    	display: block;
+    }
+    #story img {
+    	max-height: 400px;
+    }
+    footer .col-sm-9 {
+    	text-align: right;
+    }
+}
+
+/*changes page for screens above 992px*/
+@media screen and (min-width: 992px) {
+	header{
+		background-image: url("../img/background-md.jpg");
+	}
+	h1 {
+		font-size: 4em;
+	}
+	#motto {
+		display: block;
+	}
+}
+
+/*changes page for screen above 1200px*/
+@media screen and (min-width: 1200px) {
+	header{
+		background-image: url("../img/background-lg.jpg");
+	}
+	#motto {
+		display: block;
+	}
+}
+
+
+
+
+
